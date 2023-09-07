@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * This is a program that prints a statement using the puts() funtion
- * /
+ */
 
 int main(void)
 {
