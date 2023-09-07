@@ -1,10 +1,14 @@
 #include <stdio.h>
+
+/*This is a c program */
 /**
- * This is a program that prints a statement using the puts() funtion
+ *  main - This is a program that prints a statement using the puts() funtion
+ *
+ *  Return: Always success
  */
 
 int main(void)
 {
-	puts("Programming is like building a multilingual puzzle");
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
