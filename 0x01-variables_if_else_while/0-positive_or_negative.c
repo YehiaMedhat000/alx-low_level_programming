@@ -5,8 +5,8 @@
  * main - Checks the sign of an number
  *
  * Return: 0 (sucess)
- * /
-/* betty style doc for function main goes there */
+ */
+
 int main(void)
 {
 	int n;
