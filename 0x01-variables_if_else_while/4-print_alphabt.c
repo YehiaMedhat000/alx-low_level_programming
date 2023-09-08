@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	char str[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\n";
+	char str[] = "abcdefghijklmnopqrstuvwxyz\n";
 	int i;
 
 	for (i = 0 ; (unsigned)i < strlen(str) ; i++)
