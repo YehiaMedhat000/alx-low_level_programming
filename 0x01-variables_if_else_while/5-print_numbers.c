@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * main - prints the numbers of base 10
+ * main - prints the alphabet lower case
  *
  * Return: 0 (sucess)
  */
@@ -10,9 +10,9 @@ int main(void)
 {
 	int i;
 
-	for (i = 48 ; i < 58 ; i++)
+	for (i = 0 ; i < 10 ; i++)
 	{
-		putchar(i);
+		printf("%d", i);
 	}
 
 	printf("\n");
