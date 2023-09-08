@@ -20,7 +20,7 @@ int main(void)
 			{
 				continue;
 			}
-			for (k = 48 ; k < 58 ; k++)	
+			for (k = 48 ; k < 58 ; k++)
 			{
 				if (j - k >= 0)
 				{
