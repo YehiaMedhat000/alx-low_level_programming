@@ -9,7 +9,7 @@
 int main(void)
 {
 	char str[] = "abcdefghijklmnopqrstuvwxyz";
-	
+
 	printf("%s\n", str);
 	return (0);
 }
