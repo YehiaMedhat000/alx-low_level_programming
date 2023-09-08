@@ -16,7 +16,7 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	signed int ldig = n % 10;
+	int ldig = n % 10;
 	
 	if (ldig < 6 && ldig > 0)
 	{
