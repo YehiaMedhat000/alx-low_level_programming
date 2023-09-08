@@ -11,7 +11,7 @@ int main(void)
 	char str[] = "abcdefghijklmnopqrstuvwxyz\n";
 	int i;
 
-	for (i = 0 ; (unsigned)i < strlen(str) ; i++)
+	for (i = 0 ; (unsigned int)i < strlen(str) ; i++)
 	{
 		if (str[i] == 'e' || str[i] == 'q')
 		{
