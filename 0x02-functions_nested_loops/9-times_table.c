@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * main - prints some word
- * Return: Always 0 (success)
+ * times_table - prints some word
+ * Return: None, void
  */
 
 void times_table(void)
@@ -11,7 +11,12 @@ void times_table(void)
 
 	for (i = 0; i < 9; i++)
 	{
-		_putchar('0' + n % 10);
+		for (j = 0; j < 9; j++)
+		{
+			_puthcar(' ');
+			_putchar(' ');
+			_putchar('0' + (i * j));
+		}
 	}
 }
 
