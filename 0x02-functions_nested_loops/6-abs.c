@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_sign - prints some word
+ * _abs - prints some word
  * @n: parameter of type int
  * Return: Always 0 (success)
  */
