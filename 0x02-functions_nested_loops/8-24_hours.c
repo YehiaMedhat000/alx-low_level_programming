@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * main - prints some word
- * Return: Always 0 (success)
+ * jack_bauer - prints minutes in the whole day
+ * Return: None, void
  */
 
 void jack_bauer(void)
