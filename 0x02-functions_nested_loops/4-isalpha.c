@@ -11,14 +11,14 @@ int _isalpha(int c)
 
 	for (i = 65; i <= 90; i++)
 	{
-		if (i + 32 == c)
+		if (i == c)
 		{
 			return (1);
 		}
 	}
 	for (i = 97; i <= 122; i++)
 	{
-		if (i + 32 == c)
+		if (i == c)
 		{
 			return (1);
 		}
