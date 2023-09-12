@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * main - prints some word
+ * print_last_digit - prints the last digit
+ * @n: type int
  * Return: Always 0 (success)
  */
 
