@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * main - Checks if a char is lowercase
+ * _isalpha - Checks if a char is an alphabet letter
+ * @c: type int
  * Return: Always 0 (success)
  */
 
