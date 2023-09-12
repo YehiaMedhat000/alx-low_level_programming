@@ -1,6 +1,8 @@
 #include "main.h"
 /**
- * main - prints some word
+ * add - adds two integers together
+ * @a: first int
+ * @b: second int
  * Return: Always 0 (success)
  */
 
