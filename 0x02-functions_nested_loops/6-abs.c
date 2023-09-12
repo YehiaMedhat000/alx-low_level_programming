@@ -1,10 +1,11 @@
 #include "main.h"
 /**
- * main - prints some word
+ * print_sign - prints some word
+ * @n: parameter of type int
  * Return: Always 0 (success)
  */
 
-int print_sign(int n)
+int _abs(int n)
 {
 	if (n > 0)
 	{
