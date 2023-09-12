@@ -1,4 +1,4 @@
-#include <unistd.h>
+#include "main.h"
 /**
  * main - prints some word 
  * Return: Always 0 (success)
@@ -6,6 +6,6 @@
 
 int main(void)
 {
-    write(1,"_putchar",8);
+    print("_putchar");
     return (0);
 }
