@@ -4,8 +4,8 @@
  * This is a header file
  */
 
-int print(char c[])
+void print(char c[])
 {
     write(1, c, strlen(c));
-    return (0);
+    return;
 }
