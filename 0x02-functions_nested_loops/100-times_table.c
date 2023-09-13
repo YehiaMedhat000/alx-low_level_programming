@@ -28,11 +28,15 @@ void print_times_table(int n)
 			if (p <= 9)
 				_putchar(' ');
 			else if (p <= 99)
+			{
 				_putchar(' ');
 				_putchar(' ');
+			}
 			else if (p >= 100)
+			{
 				_putchar(48 + p / 100);
 				_putchar(48 + (p % 100) / 10);
+			}
 			else
 				_putchar(48 + p / 10);
 
