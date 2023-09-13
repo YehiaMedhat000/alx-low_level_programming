@@ -12,17 +12,15 @@ int main(void)
 
 	for (count = 0; count < 4000000; count++)
 	{
-		sum = fib1 + fib2;
 
 		if (sum > 4000000)
 		{
-			printf("\n");
+			printf("%lu\n", sum);
 			return (0);
 		}
-		if (sum % 2 == 0)
+		if (fib1 + fib2 % 2 == 0)
 		{
-			printf("%lu", sum);
-			printf(", ");
+			sum = fib1 + fib2;
 		}
 		fib1 = fib2;
 		fib2 = sum;
