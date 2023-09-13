@@ -15,13 +15,15 @@ int main(void)
 		sum = fib1 + fib2;
 
 		if (sum > 4000000)
+		{
 			printf("\n");
 			return (0);
-
+		}
 		if (sum % 2 == 0)
+		{
 			printf("%lu", sum);
 			printf(", ");
-
+		}
 		fib1 = fib2;
 		fib2 = sum;
 	}
