@@ -2,6 +2,8 @@
 
 /**
  * print - function to print
+ * @c: paramter, char array
+ * Return: Always success (0)
  */
 
 
