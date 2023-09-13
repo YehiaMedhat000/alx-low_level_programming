@@ -1,22 +1,27 @@
 #include "main.h"
 /**
- * times_table - prints some word
+ * print_times_table - prints some word
  * Return: None, void
  */
 
-void times_table(void)
+void print_times_table(int n)
 {
 	int i;
 	int j;
 
-	for (i = 0; i <= 9; i++)
+	if (n > 15 || n < 0)
+	{
+		return;
+	}
+
+	for (i = 0; i <= n; i++)
 	{
 		_putchar('0');
 
-		for (j = 1; j <= 9; j++)
+		for (j = 1; j <= n; j++)
 		{
-			_putchar(' ');
 			_putchar(',');
+			_putchar(' ');
 			if (i * j <= 9)
 				_putchar(' ');
 			else
