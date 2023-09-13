@@ -30,7 +30,7 @@ void print_times_table(int n)
 				_putchar(' ');
 				_putchar(' ');
 			}
-			if (p <= 99)
+			if (p <= 99 && p > 9)
 			{
 				_putchar(' ');
 				_putchar(48 + (p % 100) / 10);
