@@ -7,18 +7,25 @@
 
 void print_traingle(int size)
 {
-	int i;
+	int i, j;
 
-	for (i = 0; i < size; i++)
+	if (size <= 0)
 	{
-		for (j = 0 ; j < size; j++)
-		{
-			if (j >= size - i)
-			{
-				_putchar('#')
-			}
-			_putchar(' ');
-		}
 		_putchar('\n');
+	}
+	else
+	{
+		for (i = 0; i < size; i++)
+		{
+			for (j = 0 ; j < size; j++)
+			{
+				if (j >= size - i)
+				{
+					_putchar('#')
+				}
+				_putchar(' ');
+			}
+			_putchar('\n');
+		}	
 	}
 }
