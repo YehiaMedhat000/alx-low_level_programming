@@ -13,7 +13,7 @@ void most_numbers(void)
 	{
 		for (j = 0 ; j < 15 ; j++)
 		{
-			if (j >= 10)
+			if (j > 9)
 			{
 				_putchar('1');
 			}
@@ -22,3 +22,4 @@ void most_numbers(void)
 		_putchar('\n');
 	}
 }
+
