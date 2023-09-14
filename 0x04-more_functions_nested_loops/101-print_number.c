@@ -22,9 +22,9 @@ void print_number(int n)
 
 	for (i = 1; i <= d; i++)
 	{
-		t = 10;
+		t = 1;
 
-		for (j = 0; j < d - i - 1; j++)
+		for (j = 0; j < d - i; j++)
 		{
 			t *= 10;
 		}
