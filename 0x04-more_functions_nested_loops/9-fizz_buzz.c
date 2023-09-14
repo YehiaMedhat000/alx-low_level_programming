@@ -14,7 +14,6 @@ int main(void)
 		if (i % 5 == 0 && i % 3 == 3)
 		{
 			printf("FizzBuzz");
-			break;
 		}
 		else if (i % 5 == 0)
 		{
