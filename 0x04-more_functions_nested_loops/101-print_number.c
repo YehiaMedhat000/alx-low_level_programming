@@ -8,8 +8,8 @@
 
 void print_number(int n)
 {
-	int i, j;
-	int d = 0, t = 10;
+	int i, j, t;
+	int d = 0;
 
 	for (i = 1; i < n; i *= 10)
 	{
@@ -22,6 +22,8 @@ void print_number(int n)
 
 	for (i = 1; i <= d; i++)
 	{
+		t = 10;
+
 		for (j = 0; j < d - i; j++)
 		{
 			t *= 10;
