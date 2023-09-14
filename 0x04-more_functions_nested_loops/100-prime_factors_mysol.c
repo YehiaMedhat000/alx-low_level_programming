@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i = 2;
-	long long int num = 612852475143;
+	unsigned long num = 612852475143;
 
 	while (1)
 	{
