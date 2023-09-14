@@ -24,7 +24,7 @@ void print_number(int n)
 	{
 		t = 10;
 
-		for (j = 0; j < d - i; j++)
+		for (j = 0; j < d - i - 1; j++)
 		{
 			t *= 10;
 		}
