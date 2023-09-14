@@ -4,7 +4,7 @@
  * Return: None, void
  */
 
-void most_numbers(void)
+void more_numbers(void)
 {
 	int i;
 	int j;
@@ -13,7 +13,7 @@ void most_numbers(void)
 	{
 		for (j = 0 ; j < 15 ; j++)
 		{
-			if (j > 9)
+			if (j >= 10)
 			{
 				_putchar('1');
 			}
