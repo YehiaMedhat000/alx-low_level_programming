@@ -4,7 +4,8 @@
 /**
  * print_array - prints n elements from an array
  * separated by `, ` followed by a new line
- * @str: pointer to the first element of the array
+ * @a: pointer to the first element of the array
+ * @n: the number of element to print
  * Return: Nothing, void
  */
 
@@ -21,5 +22,5 @@ void print_array(int *a, int n)
 			printf(", ");
 		}
 	}
-	_putchar('\n');
+	printf("\n");
 }
