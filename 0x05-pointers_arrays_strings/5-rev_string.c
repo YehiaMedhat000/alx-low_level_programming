@@ -17,7 +17,6 @@ void rev_string(char *s)
 		t = *(s + i);
 		*(s + i) = *(s + len - 1 - i);
 		*(s + len - 1 - i) = t;
-		printf("t: %c, *(s + i): %c, *(s + len - 1 - i): %c\n", t, *(s + i), *(s + len - 1 - i));
 	}
 
 }
