@@ -4,3 +4,4 @@ test.c
 _putchar.c
 *.gch
 *~
+*-main.c
