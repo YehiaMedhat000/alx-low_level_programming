@@ -12,6 +12,7 @@ void rev_string(char *s)
 	int len = strlen(s);
 	char t;
 
+	printf("%d\n", len);
 	for (i = 0; i < len / 2; i++)
 	{
 		t = *(s + i);
