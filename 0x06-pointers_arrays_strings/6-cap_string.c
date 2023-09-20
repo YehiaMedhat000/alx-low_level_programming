@@ -11,13 +11,14 @@ char *cap_string(char *s)
 {
 	int i = 0;
 	int j;
-	char del[] = " ,;.!?\"(){}";
+	char del[] = " ,;.!?\"(){}\t";
 
 	while (s[i])
 	{
 		if (s[i] >= 97 && s[i] <= 122)
 		{
 			j = 0;
+			printf("%c ", s[i]);
 			while (del[j])
 			{
 				if (s[i - 1] == del[j] || i == 0)
@@ -26,6 +27,7 @@ char *cap_string(char *s)
 				}
 				j++;
 			}
+			printf("%c ", s[i]);
 		}
 		i++;
 	}
