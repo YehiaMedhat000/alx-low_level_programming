@@ -5,7 +5,7 @@
  * _strcat: Write a function that concatenates two strings
  * @src: the string to concatenate
  * @dest: the string to be concatenated to src
- * Return: pointer of type char
+ * Return: char pointer
  */
 
 char *_strcat(char *dest, char *src)
