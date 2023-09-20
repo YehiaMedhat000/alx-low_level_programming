@@ -17,10 +17,10 @@ void swap_int(int *a, int *b)
 }
 
 /**
- * _strcmp - compares two strings by ascii values
+ * reverse_array - reverses the elements in an array
  *
- * @s1: the first string
- * @s2: the second string
+ * @a: pointer to the array
+ * @n: size of array
  *
  * Return: integer of the difference in the
  * first value of difference

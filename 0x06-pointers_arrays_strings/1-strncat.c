@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * _strncat: Write a function that concatenates n chars from
+ * _strncat - Write a function that concatenates n chars from
  * a src string to a dest string.
  *
  * @src: the string to concatenate n chars from.
