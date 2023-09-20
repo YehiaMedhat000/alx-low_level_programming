@@ -1,41 +1,32 @@
-#include <string.h>
 #include "main.h"
 
 /**
- * _strncpy - copies n chars from a string to another string
- *
- * @src: pointer to the first element of the source array
- * @dest: pointer to the first element of the destination array
- * @n: number of chars to copy to dest from src
- *
- * Return: char pointer to dest
- */
-
+  * _strncpy - Copy a string
+  * @dest: The destination value
+  * @src: The source value
+  * @n: The copy limit
+  *
+  * Return: char value
+  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int i;
-	int len_src = strlen(src);
+	int a = 0, b = 0;
 
-	if (n > len_src)
+	while (src[b])
 	{
-		while (src[i] != '\0')
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		while (i < n)
-		{
-			dest[i] = 0;
-			i++;
-		}
+		b++;
 	}
 
-	else
+	while (a < n && src[a])
 	{
-		for (i = 0; i < n; i++)
-		{
-			*(dest + i) = src[i];
-		}
+		dest[a] = src[a];
+		a++;
+	}
+
+	while (a < n)
+	{
+		dest[a] = '\0';
+		a++;
 	}
 
 	return (dest);
