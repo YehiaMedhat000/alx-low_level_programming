@@ -23,13 +23,20 @@ char *_strncpy(char *dest, char *src, int n)
 			*(dest + i) = src[i];
 			i++;
 		}
-		*(dest + strlen(dest)) = '\0';
 		while (i < n)
 		{
 			*(dest + i) = 0;
 			i++;
 		}
-
+	}
+	
+	else
+	{
+		for (i = 0; i < n; i++)
+		{
+			*(dest + i) = src[i];
+		}
+		*(dest + strlen(dest)) = '\0';
 	}
 
 	return (dest);
