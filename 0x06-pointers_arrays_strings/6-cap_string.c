@@ -9,8 +9,7 @@
 
 char *cap_string(char *s)
 {
-	int i = 0;
-	int j;
+	int i = 0, j;
 	char del[] = " ,;.!?\"(){}\t\n";
 
 	while (s[i])
@@ -19,7 +18,9 @@ char *cap_string(char *s)
 		while (del[j])
 		{
 			if ((i == 0 || s[i - 1] == del[j]) && (s[i] >= 97 && s[i] <= 122))
+			{
 				s[i] -= 32;
+			}
 			j++;
 		}
 
