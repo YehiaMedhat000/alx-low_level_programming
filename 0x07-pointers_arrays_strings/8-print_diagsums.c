@@ -15,12 +15,10 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size * size; i += size + 1)
 	{
-		printf("first loop: %d\n", *(a + i));
 		sum_main += *(a + i);
 	}
 	for (i = (size * size) - size; i > 0; i -= size - 1)
 	{
-		printf("second loop: %d\n", *(a + i));
 		sum_other += *(a + i);
 	}
 
