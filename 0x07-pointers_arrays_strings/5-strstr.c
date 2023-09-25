@@ -10,24 +10,25 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, j;
+	int i = 0, j = 0;
 
+	/* Get the index of first occurrance */
 	while (haystack[i])
 	{
-		j = 0;
-
-		while (needle[j])
+		if (needle[0] == haystack[i])
 		{
-			if (haystack[i] == needle[j])
-			{
-				return (haystack + i);
-			}
-
-			j++;
-
-		} 
+			break;
+		}
 		i++;
-
 	}
-	return (NULL);
+
+	while (needle[j])
+	{
+		if (haystack[i + j] != needle[j])
+		{
+			return (NULL);
+		}
+		j++;
+	}
+	return (haystack + i);
 }
