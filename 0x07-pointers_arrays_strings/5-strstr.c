@@ -1,3 +1,4 @@
+#include <string.h>
 #include "main.h"
 
 /**
@@ -12,6 +13,10 @@ char *_strstr(char *haystack, char *needle)
 {
 	int i;
 
+	if (!strlen(needle))
+	{
+		return (haystack);
+	}
 	/* Get the index of first occurrance */
 	while (*haystack)
 	{
