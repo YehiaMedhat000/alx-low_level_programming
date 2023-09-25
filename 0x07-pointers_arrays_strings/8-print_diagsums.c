@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_diagsums - Prints the sums of the diagonals 
+ * print_diagsums - Prints the sums of the diagonals
  * for a square matrix
  * @a: Char pointer for the first subarray
  * @size: size of the matrix
