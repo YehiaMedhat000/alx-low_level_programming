@@ -9,38 +9,35 @@
  * char in needle in haystack
  */
 
+/**
+* _strstr - locates a substring
+*
+* @haystack: the longer string to search
+* @needle: the substring to search for
+*
+* Return: a pointer to the beginning of the located substring, or NULL if
+* the substring is not found.
+*/
+
 char *_strstr(char *haystack, char *needle)
 {
 	int i;
+	int s = 0;
 
-	if (!strlen(needle))
-	{
-		return (haystack);
-	}
-	/* Get the index of first occurrance */
+	while (needle[s] != '\0')
+		s++;
+
 	while (*haystack)
 	{
-		if (*needle == *haystack)
+		for (i = 0; needle[i]; i++)
 		{
-			i = 0;
-
-			while (needle[i])
-			{
-
-				/* Check needle matching haystack from i */
-				if (*(needle + i) != *(haystack + i))
-					break;
-
-				i++;
-			}
-			if (!needle[i])
-			{
-				printf("quitted inner loop and return hay is done\n");
-				return (haystack);
-			}
+			if (haystack[i] != needle[i])
+				break;
 		}
-		haystack++;
+		if (i != s)
+			haystack++;
+		else
+			return (haystack);
 	}
-
 	return (NULL);
 }
