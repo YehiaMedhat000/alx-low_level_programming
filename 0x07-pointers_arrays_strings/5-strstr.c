@@ -10,25 +10,32 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0, j = 0;
+	int i;
 
 	/* Get the index of first occurrance */
-	while (haystack[i])
+	while (*haystack)
 	{
-		if (needle[0] == haystack[i])
+		if (*needle == *haystack)
 		{
-			break;
+			i = 0;
+
+			while (needle[i])
+			{
+
+				/* Check needle matching haystack from i */
+				if (*(needle + i) != *(haystack + i))
+					break;
+
+				i++;
+			}
+			if (!needle[i])
+			{
+				printf("quitted inner loop and return hay is done\n");
+				return (haystack);
+			}
 		}
-		i++;
+		haystack++;
 	}
 
-	while (needle[j])
-	{
-		if (haystack[i + j] != needle[j])
-		{
-			return (NULL);
-		}
-		j++;
-	}
-	return (haystack + i);
+	return (NULL);
 }
