@@ -4,7 +4,7 @@
  * _strspn - Gets the length of a prefix substring.
  * @s: Pointer to the string
  * @accept: The string to find in s
- * Return: Number of bytes in the initial segment of s which 
+ * Return: Number of bytes in the initial segment of s which
  * consist only of bytes from accept
  */
 
