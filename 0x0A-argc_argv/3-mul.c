@@ -10,12 +10,15 @@
 
 int main(int argc, char **argv)
 {
-	int n1 = atoi(argv[1]);
-	int n2 = atoi(argv[2]);
-	int total = n1 * n2;
+	int n1, n2, total;
 
 	if (argc == 3)
 	{
+
+		n1 = atoi(argv[1]);
+		n2 = atoi(argv[2]);
+		total = n1 * n2;
+
 		printf("%d\n", total);
 		return (0);
 	}
