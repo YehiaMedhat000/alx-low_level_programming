@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - Entry point
@@ -9,16 +10,19 @@
 
 int main(int argc, char **argv)
 {
-	int n1 = *argv[1] - 48;
-	int n2 = *argv[2] - 48;
+	int n1 = atoi(argv[1]);
+	int n2 = atoi(argv[2]);
 	int total = n1 * n2;
 
-	if (argc < 2)
+	if (argc == 3)
+	{
+		printf("%d\n", total);
+		return (0);
+	}
+
+	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	printf("%d\n", total);
-	return (0);
 }
