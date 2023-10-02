@@ -16,6 +16,11 @@ int main(int argc, char **argv)
 	if (argc == 2)
 	{
 		num = atoi(argv[1]);
+		if (num < 0)
+		{
+			printf("0\n");
+			return (0);
+		}
 
 		for (i = 0; i < 5; i++)
 		{
