@@ -2,6 +2,8 @@
 
 /**
  * main - Entry point
+ * @argc: Number of arguments
+ * @argv: Array of the arguments passed to the executable
  * Return: Always success (0)
  */
 
