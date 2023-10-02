@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # The gcc command for getting object files
-gcc -c *.c
+gcc -Wall -Werror -Wextra -pedantic -c *.c
 
 # Want to add conditional to handle errors or logical errors of gcc
 
