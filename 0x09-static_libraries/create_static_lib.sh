@@ -7,4 +7,4 @@ gcc -c *.c
 ar -rc liball.a *.o
 
 # Make the libray's indexing
-ranlib liball.a
+#ranlib liball.a
