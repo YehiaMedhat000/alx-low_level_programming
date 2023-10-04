@@ -9,6 +9,7 @@
  * This is a header file
  */
 
+char **strtow(char *str);
 char *argstostr(int ac, char **av);
 int _putchar(char c);
 char *_strdup(char *str);
