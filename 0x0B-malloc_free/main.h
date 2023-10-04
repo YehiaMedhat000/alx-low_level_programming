@@ -9,6 +9,7 @@
  * This is a header file
  */
 
+char *argstostr(int ac, char **av);
 int _putchar(char c);
 char *_strdup(char *str);
 void free_grid(int **grid, int height);
