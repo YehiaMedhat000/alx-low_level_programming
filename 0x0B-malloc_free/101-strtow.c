@@ -1,20 +1,14 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
 /**
- * strtow - function that splits a string into words.
- * @str : pointer
- * Return: Char
+ * CWords - Counts how many words in string
+ * @str: the string of interest
+ * Return: integer
  */
 
-char **strtow(char *str)
+int CWords(char *str)
 {
-	int i = 0, j = 0, k = 0;
-	int len = 0, count = 0;
-	char **f, *col;
-	if (!str || !*str)
-		return (NULL);
 	while (*(str + i))
 	{
 		if (*(str + i) != ' ')
@@ -24,6 +18,23 @@ char **strtow(char *str)
 		}
 		i++;
 	}
+	return (i);
+}
+
+/**
+ * strtow - function that splits a string into words.
+ * @str : pointer
+ * Return: Char
+ */
+
+char **strtow(char *str)
+{
+	int i = CWords(str), j = 0, k = 0;
+	int len = 0, count = 0;
+	char **f, *col;
+
+	if (!str || !*str)
+		return (NULL);
 	if (count == 0)
 		return (NULL);
 	count += 1;
