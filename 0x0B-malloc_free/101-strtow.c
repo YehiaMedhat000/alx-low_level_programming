@@ -10,6 +10,7 @@
 int CWords(char *str)
 {
 	int i = 0;
+	int count = 0;
 
 	while (*(str + i))
 	{
@@ -20,7 +21,7 @@ int CWords(char *str)
 		}
 		i++;
 	}
-	return (i);
+	return (count);
 }
 
 /**
@@ -31,8 +32,8 @@ int CWords(char *str)
 
 char **strtow(char *str)
 {
-	int i = CWords(str), j = 0, k = 0;
-	int len = 0, count = 0;
+	int i = 0, j = 0, k = 0;
+	int len = 0, count = CWords(str);
 	char **f, *col;
 
 	if (!str || !*str)
