@@ -9,8 +9,13 @@
 
 char *_strdup(char *str)
 {
-	char *p = (char *)malloc(sizeof(str));
+	char *p; 
 	int i;
+
+	else if (str == NULL)
+		return (NULL);
+
+	*p = (char *)malloc(sizeof(str));
 
 	if (p == NULL)
 		return (NULL);
