@@ -32,7 +32,7 @@ int CWords(char *str)
 
 char **strtow(char *str)
 {
-	int j = 0, k = 0;
+	int i = 0, j = 0, k = 0;
 	int len = 0, count = CWords(str);
 	char **f, *col;
 
