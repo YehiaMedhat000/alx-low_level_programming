@@ -46,11 +46,11 @@ char **strtow(char *str)
 		return (NULL);
 	while (*str)
 	{
-			while (*str == ' ' && *str)
-				str++;
+		while (*str == ' ' && *str)
+			str++;
 		len = 0;
-			while (*(str + len) != ' ' && *(str + len))
-				len += 1;
+		while (*(str + len) != ' ' && *(str + len))
+			len += 1;
 		len += 1;
 		col = malloc(sizeof(char) * len);
 		if (!col)
@@ -60,7 +60,7 @@ char **strtow(char *str)
 			free(f);
 			return (NULL);
 		}
-		for (k = 0; k < (len - 1);  k++)	
+		for (k = 0; k < (len - 1);  k++)
 			*(col + k) = *(str++);
 		*(col + k) = '\0';
 		*(f + j) = col;
