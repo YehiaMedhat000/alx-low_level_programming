@@ -32,7 +32,7 @@ int CWords(char *str)
 
 char **strtow(char *str)
 {
-	int i = 0, j = 0, k = 0;
+	int j = 0, k = 0;
 	int len = 0, count = CWords(str);
 	char **f, *col;
 
@@ -44,7 +44,6 @@ char **strtow(char *str)
 	f = malloc(sizeof(char *) * count);
 	if (!f)
 		return (NULL);
-	i = 0;
 	while (*str)
 	{
 			while (*str == ' ' && *str)
