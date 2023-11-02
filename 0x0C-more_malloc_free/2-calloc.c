@@ -11,7 +11,7 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *p;
+	char *p;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
@@ -20,11 +20,9 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (p == NULL)
 		return (NULL);
 
-	/* Tried assigning the values of the elements */
 	for (; nmemb > 0 ; nmemb -= 1)
 	{
 		p[nmemb - 1] = 0;
 	} 
-	/* Returns nothing with the current code */
 	return (p);
 }
