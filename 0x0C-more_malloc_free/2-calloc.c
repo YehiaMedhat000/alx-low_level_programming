@@ -3,26 +3,28 @@
 
 /**
  * _calloc - Allocates memory for an array using malloc
- * @nmemb: The number of elements
- * @size: The size of each element
- * Return: Pointer to the allocated space
- * NULL in failure or if one parameter atleast is 0
+ * @nmemb: Number of elements in the array
+ * @size: The size of the array
+ * Return: Pointer to the allocated space, NULL otherwise
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
+	char *ptr;
+	unsigned int count;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
-
-	p = malloc(nmemb * size);
-	if (p == NULL)
-		return (NULL);
-
-	for (; nmemb > 0 ; nmemb -= 1)
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
 	{
-		p[nmemb - 1] = 0;
-	} 
-	return (p);
+		return (NULL);
+	}
+	count = 0;
+	while (count < nmemb * size)
+	{
+		ptr[count] = 0;
+		count++;
+	}
+	return (ptr);
 }
