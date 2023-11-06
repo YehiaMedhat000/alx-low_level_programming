@@ -6,7 +6,7 @@
  * print_dog - Prints a struct dog
  *
  * @d: Pointer to the dog object
- * Description: Prints Attributes of 
+ * Description: Prints Attributes of
  * a dog object, if an attribute is
  * null it prints (nil), if d is null
  * It prints nothing
