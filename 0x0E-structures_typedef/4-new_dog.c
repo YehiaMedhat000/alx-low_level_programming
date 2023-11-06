@@ -13,23 +13,27 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
-	char *name_copy, *owner_copy;
 
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
 
 	if (name == NULL)
-		free(name);
-	if (owner == NULL)
+	{
+		free(d);
 		free(owner);
+		return (NULL);
+	}
+	if (owner == NULL)
+	{
+		free(d);
+		free(name);
+		return (NULL);
+	}
 
-	name_copy = name;
-	owner_copy = owner;
-
-	d->name = name_copy;
+	d->name = name;
 	d->age = age;
-	d->owner = owner_copy;
+	d->owner = owner;
 	return (d);
 
 }
