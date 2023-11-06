@@ -8,7 +8,7 @@
  * @d: Pointer to the dog object
  * @name: String having the dog's name
  * @age: The dog's age
- * @owenr: The owner's name
+ * @owner: The owner's name
  *
  * Description: Function That defines
  * A data type and returns none
