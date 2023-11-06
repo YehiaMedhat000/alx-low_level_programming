@@ -7,8 +7,8 @@
  * @owner: The dog's owner's name
  * @age: The dog's age
  *
- * Describtion: Data type for defining dog objects 
- * Could be used in datasets 
+ * Describtion: Data type for defining dog objects
+ * Could be used in datasets
  * later and building them efficiently
  */
 
