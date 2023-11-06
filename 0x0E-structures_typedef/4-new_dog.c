@@ -1,5 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
+#include <string.h>
+#define len(x) (strlen(x) + 1)
 
 /**
  * new_dog - entry point
@@ -8,6 +10,7 @@
  * @owner: string from main, owner of pet
  * Return: p
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *p;
@@ -16,12 +19,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (p == NULL)
 		return (NULL);
 	/* Cpunting name pointer*/
+	p->name = malloc(sizeof(char) * len(name));
 	if (name == NULL)
 	{
 		free(p);
 		free(owner);
 		return (NULL);
 	}
+	p->owner = malloc(sizeof(char) * len(owner));
 	if (owner == NULL)
 	{
 		free(p);
