@@ -3,12 +3,12 @@
 
 /**
  * int_index - Searches for an integer
- * 
+ *
  * @array: Array to search
  * @size: Array number of elements
  * @cmp: Pointer to a function to
  * compare the elements
- * 
+ *
  * Return: The index of the first
  * element for which the cmp function
  * does not return 0
