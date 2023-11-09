@@ -1,92 +1,96 @@
+#include <stdio.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 
 /**
- * format_char - Formats characters
- * @sep: Separator of the strings
- * @va_list: The character passed
- * Return: Nothing
+ * printf_char - printfs a char from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
  */
-
-void format_char(char *sep, va_list ap)
+void printf_char(va_list list)
 {
-	printf("%s%c", sep, va_arg(ap, int));
+	printf("%c", (char) va_arg(list, int));
 }
 
 /**
- * format_int - Formats integer
- * @sep: Separator of the integers
- * @va_list: The integer passed
- * Return: Nothing
+ * printf_int - printfs an int from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
  */
-
-void format_int(char *sep, va_list ap)
+void printf_int(va_list list)
 {
-	printf("%s%d", sep, va_arg(ap, int));
+	printf("%d", va_arg(list, int));
 }
 
 /**
- * format_float - Formats floats
- * @sep: Separator of the floats
- * @va_list: The floats passed
- * Return: Nothing
+ * printf_float - printfs a float from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
  */
-
-void format_float(char *sep, va_list ap)
+void printf_float(va_list list)
 {
-	printf("%s%f", sep, va_arg(ap, double));
+	printf("%f", (float) va_arg(list, double));
 }
 
 /**
- * format_string - Formats strings
- * @sep: Separator of the strings
- * @va_list: The strings passed
- * Return: Nothing
+ * printf_string - printfs a string from var args
+ *
+ * @list: va_list to print from
+ *
+ * Return: void
  */
-
-void format_string(char *sep, va_list ap)
+void printf_string(va_list list)
 {
-	char *str = va_arg(ap, char *);
+	char *str = va_arg(list, char*);
 
-	if (str)
+	while (str != NULL)
 	{
-		printf("%s%s", sep, va_arg(ap, char *));
+		printf("%s", str);
+		return;
 	}
-	else
-	{
-		printf("nil");
-	}
+	printf("(nil)");
 }
 
-/**
- * print_all - Prints anything
- * @format: String with formats for
- * the strings printed
- * Return: Nothing
- */
 
+/**
+ * print_all - prints various types given a format string for the arguments
+ *
+ * @format: string containing type information for args
+ *
+ * Return: void
+ */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j;
-	va_list(params);
+	const char *ptr;
+	va_list list;
+	funckey key[4] = { {printf_char, 'c'}, {printf_int, 'i'},
+			   {printf_float, 'f'}, {printf_string, 's'} };
+	int keyind = 0, notfirst = 0;
 
-	token_t tokens[] = {
-		{"c", format_char},
-		{"s", format_string},
-		{"i", format_int},
-		{"f", format_float},
-		{NULL, NULL}
-	};
-
-	va_start(params, format);
-	while (format && format[i])
+	ptr = format;
+	va_start(list, format);
+	while (format != NULL && *ptr)
 	{
-		j = 0;
-		while (tokens[j].token)
+		if (key[keyind].spec == *ptr)
 		{
-			if (tokens[j].token[0] == format[i])
-				tokens[i].f(", ", params);
-			j++;
+			if (notfirst)
+				printf(", ");
+			notfirst = 1;
+			key[keyind].f(list);
+			ptr++;
+			keyind = -1;
 		}
-		i++;
+		keyind++;
+		ptr += keyind / 4;
+		keyind %= 4;
 	}
+	printf("\n");
+
+	va_end(list);
 }
