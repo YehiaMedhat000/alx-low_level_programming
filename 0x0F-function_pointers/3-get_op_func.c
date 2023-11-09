@@ -3,14 +3,18 @@
 #include <stdio.h>
 
 /**
- * get_op_func - determines which of the operations to use
- * @s: string parameter
- *
- * Return: pointer to operation
+ * get_op_func - Gets the operator
+ * @int: first argument
+ * @int: second argument
+ * Return: Function pointer to the
+ * corresponding function of operation
  */
+
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ops[] = {
+	int i = 0;
+
+	op_t op[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
@@ -18,16 +22,15 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
 
-	i = 0;
-	while (ops[i].f != NULL)
+	while (op[i].op != NULL)
 	{
-		if (*s == *(ops[i].op) && s[1] == '\0')
-			return (ops[i].f);
+		if (*(op[i].op) == *s)
+		{
+			return (op[i].f);
+		}
 		i++;
 	}
 
-	printf("Error\n");
-	exit(99);
+	return (NULL);
 }
