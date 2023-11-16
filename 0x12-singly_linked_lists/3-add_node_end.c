@@ -31,9 +31,13 @@ list_t *add_node_end(list_t **head, const char *str)
 		llist->len = strlen(str);
 	}
 	/* Get to the end of head */
-	while (node->next)
-		node = node->next;
-
-	node->next = llist;
+	if (node)
+	{
+		while (node->next)
+			node = node->next;
+		node->next = llist;
+	}
+	else
+		*head = llist;
 	return (llist);
 }
