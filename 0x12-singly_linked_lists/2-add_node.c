@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * add_node - Adds a new node to the 
+ * add_node - Adds a new node to the
  * beginning of h
  *
  * @head: The head of list in use
@@ -16,7 +16,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *llist = malloc(sizeof(list_t *));
-	
+
 	if (!head || !llist)
 		return (NULL); /* Fail */
 
