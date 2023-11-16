@@ -10,7 +10,7 @@
  * @head: The head of list in use
  * @str: String to insert to the node
  *
- * Returns: Pointer to the list or NULL in failure
+ * Return: Pointer to the list or NULL in failure
  */
 
 list_t *add_node(list_t **head, const char *str)
