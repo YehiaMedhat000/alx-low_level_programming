@@ -1,8 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index -
- * Inserts a node at given index
+ * insert_nodeint_at_index - Inserts a node at given index
  * @head: Pointer to the list of nodes
  * @idx: The index of the given node
  * @n: The integer to put in the node
@@ -30,5 +29,9 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	temp = cursor->next;
 	cursor->next = new_node;
 	new_node->next = temp;
+	/* Check for failures */
+	if (new_node || temp || cursor)
+		return (NULL);
+
 	return (new_node);
 }
