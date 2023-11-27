@@ -6,7 +6,6 @@
  * @filename: String of the file name
  * @letters: The number of letters to
  * print
- * 
  * Return: The actual number of bytes
  * it could print
  */
