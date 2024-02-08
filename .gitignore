@@ -1,4 +1,5 @@
 *.exe
+*.out
 test.c
 .vscode
 _putchar.c
