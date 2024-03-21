@@ -1,0 +1,8 @@
+#!/bin/bash
+
+CC=gcc
+FF="-Wall -pedantic -Werror -Wextra -std=gnu89 -g"
+FILES=ls | grep -v "main.c"
+
+$CC $FF $FILES $1
+./a.out
