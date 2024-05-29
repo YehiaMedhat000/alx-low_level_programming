@@ -1,0 +1,7 @@
+https://github.com/Fraol123/alx-low_level_programming/blob/main/0x1C-makefiles/5-island_perimeter.py
+https://github.com/Fraol123/alx-low_level_programming/blob/main/0x1C-makefiles/4-Makefile
+https://github.com/Fraol123/alx-low_level_programming/blob/main/0x1C-makefiles/3-Makefile
+https://github.com/Fraol123/alx-low_level_programming/blob/main/0x1C-makefiles/1-Makefile
+https://github.com/Fraol123/alx-low_level_programming/blob/main/0x1C-makefiles/0-Makefile
+https://github.com/Fraol123/alx-low_level_programming/blob/main/0x1C-makefiles/100-Makefile
+
