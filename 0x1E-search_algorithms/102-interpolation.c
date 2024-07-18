@@ -21,17 +21,23 @@ int interpolation_search(int *array, size_t size, int value)
 	do {
 
 		pos = get_pos(low, high, array, value);
+
+		chk_pos = pos < high && pos > low;
+		chk_val = array[low] <= value && array[high] >= value;
+
 		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 
 		if (array[pos] == value)
-			return (pos);
+		{
+			while (array[pos - 1] == array[pos])
+				pos--;
+
+			return (pos + 1);
+		}
 		else if (array[pos] > value)
 			high = pos - 1;
 		else if (array[pos] < value)
 			low = pos + 1;
-
-		chk_pos = pos < high && pos > low;
-		chk_val = array[low] <= value && array[high] >= value;
 
 	} while (low < high && chk_pos && chk_val);
 
