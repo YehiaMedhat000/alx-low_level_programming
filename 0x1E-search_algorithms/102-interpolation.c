@@ -14,22 +14,26 @@ size_t get_pos(size_t low, size_t high, int *array, int value);
 
 int interpolation_search(int *array, size_t size, int value)
 {
-	size_t low = 0, high = size - 1, pos = 0;
+	size_t low = 0, high = size - 1, pos = 0, chk_pos = 0, chk_val = 0;
 
-	if (!array)
+	if (!array || !size)
 		return (-1);
 	do {
+
 		pos = get_pos(low, high, array, value);
 		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
-		if (pos > size || pos > high)
-			return (-1);
+
 		if (array[pos] == value)
 			return (pos);
 		else if (array[pos] > value)
-			high = pos;
-		else
-			low = pos;
-	} while (array[low] <= value && array[high] >= value);
+			high = pos - 1;
+		else if (array[pos] < value)
+			low = pos + 1;
+
+		chk_pos = pos < high && pos > low;
+		chk_val = array[low] <= value && array[high] >= value;
+
+	} while (low < high && chk_pos && chk_val);
 
 	return (-1);
 }
@@ -47,7 +51,7 @@ int interpolation_search(int *array, size_t size, int value)
 
 size_t get_pos(size_t low, size_t high, int *array, int value)
 {
-	double num = (high - low) / (array[high] - array[low]);
+	double num = (double)(high - low) / (array[high] - array[low]);
 	int denom = value - array[low];
 	size_t pos = (num * denom) + low;
 
